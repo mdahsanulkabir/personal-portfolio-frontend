@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './About.scss';
-import { images } from '../../constants';
 import { client, urlFor } from '../../client';
+
+import { AppWrap } from '../../wrapper';
 
 interface About {
     title: string;
@@ -50,4 +51,5 @@ const About = () => {
     );
 };
 
-export default About;
+const WrappedAbout =  AppWrap({Component : About, idName : 'about'});
+export default WrappedAbout;
