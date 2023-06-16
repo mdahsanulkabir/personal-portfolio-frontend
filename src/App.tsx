@@ -3,6 +3,8 @@
 import { About, Footer, Header, Skills, Testimonial, Work } from "./container"
 import { Navbar } from './components'
 import './App.scss'
+// import dotenv from 'dotenv';
+// dotenv.config();
 
 function App() {
 
