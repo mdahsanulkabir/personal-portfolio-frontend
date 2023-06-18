@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import './About.scss';
 import { client, urlFor } from '../../client';
 
-import { AppWrap } from '../../wrapper';
+import { AppWrap, MotionWrap } from '../../wrapper';
 
 interface About {
     title: string;
@@ -51,5 +51,12 @@ const About = () => {
     );
 };
 
-const WrappedAbout =  AppWrap({Component : About, idName : 'about'});
+const WrappedAbout =  AppWrap({
+    Component : MotionWrap({
+        Component : About, 
+        classNames : ['app__skills']
+    }),
+    idName : 'about', 
+    classNames: ['app__whitebg']
+});
 export default WrappedAbout;
